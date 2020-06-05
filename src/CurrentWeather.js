@@ -1,5 +1,6 @@
 import React from "react";
 import "./CurrentWeather.css";
+import UnitButton from "./UnitButton";
 
 export default function CurrentWeather() {
   let WeatherData = {
@@ -28,7 +29,9 @@ export default function CurrentWeather() {
             Humidity: <span>{WeatherData.humidity}</span>%
           </p>
         </div>
-        <div className="col-5">Button</div>
+        <div className="col-5">
+          <UnitButton />
+        </div>
       </div>
     </div>
   );

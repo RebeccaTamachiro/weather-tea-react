@@ -1,5 +1,8 @@
 import React from "react";
 import CurrentWeather from "./CurrentWeather";
+import TipCard from "./TipCard";
+import SearchEngine from "./SearchEngine";
+
 import "./App.css";
 
 function App() {
@@ -10,7 +13,7 @@ function App() {
           <h1>Weather Tea</h1>
         </div>
       </div>
-      <div className="main-card-wrapper mt-4">
+      <div className="row main-card-wrapper mt-4">
         <div className="main-card mt-0 mb-1 p-3">
           <h2 className="mb-0">
             Now in
@@ -24,7 +27,10 @@ function App() {
                 <span> May 22 </span>,<span>22:05</span>
               </p>
             </div>
-            <div className="interactive col mt-4 mr-2"></div>
+            <div className="interactive col mt-4 mr-2">
+              <TipCard />
+              <SearchEngine />
+            </div>
           </div>
           <h2 className="forecast-header mt-2">
             What to expect for the next hours:

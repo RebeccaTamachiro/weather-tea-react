@@ -1,0 +1,23 @@
+.UnitButton .btn-group {
+  border-radius: 4px;
+  height: 25px;
+  padding: 0 auto;
+}
+
+.UnitButton .units-switch {
+  background-color: #608686;
+}
+
+.UnitButton .active-unit-wrapper {
+  background-color: #608686;
+  font-size: 12px;
+  padding: 0 auto;
+  height: 25px;
+}
+
+.UnitButton .alternative-unit-wrapper {
+  background-color: #6ca4a4;
+  font-size: 12px;
+  padding: 0 auto;
+  height: 25px;
+}
