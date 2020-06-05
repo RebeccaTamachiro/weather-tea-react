@@ -2,6 +2,8 @@ import React from "react";
 import CurrentWeather from "./CurrentWeather";
 import TipCard from "./TipCard";
 import SearchEngine from "./SearchEngine";
+import Forecast from "./Forecast";
+import Credit from "./Credit";
 
 import "./App.css";
 
@@ -35,8 +37,13 @@ function App() {
           <h2 className="forecast-header mt-2">
             What to expect for the next hours:
           </h2>
-          <div className="card-group row bg-transparent"></div>
+          <div className="card-group row bg-transparent">
+            <Forecast />
+          </div>
         </div>
+      </div>
+      <div className="row">
+        <Credit />
       </div>
     </div>
   );
