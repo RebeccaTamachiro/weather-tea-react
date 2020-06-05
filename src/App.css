@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+.App h1 {
+  color: #56d5c2;
+  margin-top: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .app-title {
+  border-left: #56d5c2 solid 2pt;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .main-card-wrapper {
+  min-width: 18rem;
+  max-width: 35rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App .main-card {
+  border: 2pt solid #56d5c2;
+  border-radius: 4px;
+  background-color: #dbf1f1;
+  font-family: ubuntu;
 }
 
-.App-link {
-  color: #61dafb;
+.App .location {
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App h2 {
+  font-size: 24px;
+  color: #3a403d;
+}
+
+.App .main-info {
+  min-width: 12rem;
+}
+
+.App .secondary-info {
+  color: #608686;
+  font-size: 12px;
+}
+
+.App .forecast-header {
+  font-size: 16px;
+  color: #3a403d;
 }
