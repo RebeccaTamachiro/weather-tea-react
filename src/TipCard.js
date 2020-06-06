@@ -7,7 +7,7 @@ export default function TipCard() {
       <div className="card-body bg-light mb-2 tea-tip">
         <p className="card-text">
           👉 A great weather to have a warm
-          <span class="tea-flavour"> chamomile tea </span>OR...
+          <span className="tea-flavour"> chamomile tea </span>OR...
         </p>
       </div>
     </div>
