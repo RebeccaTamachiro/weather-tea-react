@@ -9,9 +9,16 @@ import "./Weather.css";
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
+  const [weatherData, setWeatherData] = useState({});
 
   function handleResponse(response) {
-    console.log(response.data);
+    setWeatherData({
+      city: response.data.name,
+      temperature: response.data.main.temp,
+      description: response.data.weather[0].description,
+      wind: response.data.wind.speed,
+      humidity: response.data.main.humidity,
+    });
     setReady(true);
   }
 
@@ -32,7 +39,7 @@ export default function Weather(props) {
             </h2>
             <div className="row">
               <div className="main-info col">
-                <CurrentWeather />
+                <CurrentWeather data={weatherData} />
                 <p className="my-0 secondary-info">
                   Last updated:
                   <span> May 22</span>, <span>22:05</span>
