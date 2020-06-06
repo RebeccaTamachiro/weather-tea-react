@@ -1,0 +1,41 @@
+.Weather .main-card-wrapper {
+  min-width: 18rem;
+  max-width: 35rem;
+}
+
+.Weather .main-card {
+  border: 2pt solid #56d5c2;
+  border-radius: 4px;
+  background-color: #dbf1f1;
+  font-family: ubuntu;
+}
+
+.Weather .location {
+  text-transform: uppercase;
+}
+
+.Weather h2 {
+  font-size: 24px;
+  color: #3a403d;
+}
+
+.Weather .main-info {
+  min-width: 12rem;
+}
+
+.Weather .secondary-info {
+  color: #608686;
+  font-size: 12px;
+}
+
+.Weather .forecast-header {
+  font-size: 16px;
+  color: #3a403d;
+}
+.Weather .city-search {
+  border: 1px solid #608686;
+}
+
+.Weather .button-addon2 {
+  background-color: #ffb6b6;
+}

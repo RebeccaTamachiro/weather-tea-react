@@ -10,38 +10,3 @@
 .App .app-title {
   border-left: #56d5c2 solid 2pt;
 }
-
-.App .main-card-wrapper {
-  min-width: 18rem;
-  max-width: 35rem;
-}
-
-.App .main-card {
-  border: 2pt solid #56d5c2;
-  border-radius: 4px;
-  background-color: #dbf1f1;
-  font-family: ubuntu;
-}
-
-.App .location {
-  text-transform: uppercase;
-}
-
-.App h2 {
-  font-size: 24px;
-  color: #3a403d;
-}
-
-.App .main-info {
-  min-width: 12rem;
-}
-
-.App .secondary-info {
-  color: #608686;
-  font-size: 12px;
-}
-
-.App .forecast-header {
-  font-size: 16px;
-  color: #3a403d;
-}
