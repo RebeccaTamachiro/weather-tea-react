@@ -13,8 +13,8 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    setCity(response.data.name);
     setWeatherData({
+      newCity: response.data.name,
       ready: true,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
@@ -30,6 +30,15 @@ export default function Weather(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function updateCity(event) {
+    setCity(event.target.value);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
@@ -37,7 +46,7 @@ export default function Weather(props) {
           <div className="main-card mt-0 mb-1 p-3">
             <h2 className="mb-0">
               Now in
-              <span className="location"> {city}</span>:
+              <span className="location"> {weatherData.newCity}</span>:
             </h2>
             <div className="row">
               <div className="main-info col">
@@ -47,12 +56,13 @@ export default function Weather(props) {
               <div className="interactive col mt-4 mr-2">
                 <TipCard />
                 <p className="mb-2">...find a different city 🙂</p>
-                <form className="mb-2">
+                <form className="mb-2" onSubmit={handleSubmit}>
                   <div className="input-group my-0">
                     <input
-                      type="text"
+                      type="search"
                       autoComplete="off"
                       className="form-control bg-light city-search"
+                      onChange={updateCity}
                     />
                     <div className="input-group-append">
                       <button
