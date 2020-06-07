@@ -13,7 +13,7 @@ function App() {
             <h1>Weather Tea</h1>
           </div>
         </div>
-        <Weather city="Paris" />
+        <Weather defaultCity="São Paulo" />
         <div className="row">
           <Credit />
         </div>

@@ -4,46 +4,45 @@ import axios from "axios";
 import CurrentWeather from "./CurrentWeather";
 import TipCard from "./TipCard";
 import Forecast from "./Forecast";
+import FormattedDate from "./FormattedDate";
 
 import "./Weather.css";
 
 export default function Weather(props) {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
+    setCity(response.data.name);
     setWeatherData({
-      city: response.data.name,
+      ready: true,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
-      wind: response.data.wind.speed,
+      wind: Math.round(response.data.wind.speed * 3.6),
       humidity: response.data.main.humidity,
+      date: new Date(response.data.dt * 1000),
     });
-    setReady(true);
   }
 
   function search() {
     const apiKey = "461572920dce0becb1819d70275340e2";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="Weather">
         <div className="row main-card-wrapper mt-4">
           <div className="main-card mt-0 mb-1 p-3">
             <h2 className="mb-0">
               Now in
-              <span className="location"> Lisbon</span>:
+              <span className="location"> {city}</span>:
             </h2>
             <div className="row">
               <div className="main-info col">
                 <CurrentWeather data={weatherData} />
-                <p className="my-0 secondary-info">
-                  Last updated:
-                  <span> May 22</span>, <span>22:05</span>
-                </p>
+                <FormattedDate date={weatherData.date} />
               </div>
               <div className="interactive col mt-4 mr-2">
                 <TipCard />
