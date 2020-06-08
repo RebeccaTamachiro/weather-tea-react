@@ -1,4 +1,5 @@
 import React from "react";
+import WeatherIcon from "./WeatherIcon";
 import "./CurrentWeather.css";
 
 export default function CurrentWeather(props) {
@@ -12,7 +13,7 @@ export default function CurrentWeather(props) {
         </div>
 
         <div className="main-icon-wrapper col pt-3">
-          <i className="fas fa-cloud mt-4" />
+          <WeatherIcon iconCode={props.data.icon} />
         </div>
       </div>
       <h3 className="weather-description mt-2">{props.data.description}</h3>

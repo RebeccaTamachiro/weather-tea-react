@@ -15,7 +15,10 @@
 }
 
 .CurrentWeather .main-icon-wrapper {
-  font-size: 60px;
+  font-size: 54px;
+  margin-top: 10px;
+  padding: 0;
+  text-align: left;
   color: #93e4f9;
   text-shadow: 2px 2px 3px #c8c8c8;
 }
