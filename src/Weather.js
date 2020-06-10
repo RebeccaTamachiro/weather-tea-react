@@ -84,7 +84,7 @@ export default function Weather(props) {
               What to expect for the next hours:
             </h2>
             <div className="card-group row bg-transparent">
-              <Forecast />
+              <Forecast city={weatherData.newCity} />
             </div>
           </div>
         </div>
