@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import CurrentWeather from "./CurrentWeather";
+import WeatherParameters from "./WeatherParameters";
 import TipCard from "./TipCard";
 import Forecast from "./Forecast";
 import FormattedDate from "./FormattedDate";
@@ -40,6 +41,16 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
+  function chooseCelsius(event) {
+    event.preventDefault();
+    alert("Celsius rules!");
+  }
+
+  function chooseFahrenheit(event) {
+    event.preventDefault();
+    alert("Why would you do this?");
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
@@ -52,6 +63,32 @@ export default function Weather(props) {
             <div className="row">
               <div className="main-info col">
                 <CurrentWeather data={weatherData} />
+                <div className="row">
+                  <WeatherParameters data={weatherData} />
+                  <div className="col-5">
+                    <div
+                      className="btn-group btn-group-toggle mt-4"
+                      data-toggle="buttons"
+                    >
+                      <label className="btn btn-secondary border-1 active-unit-wrapper">
+                        <input
+                          type="radio"
+                          name="options"
+                          onClick={chooseCelsius}
+                        />
+                        ºC
+                      </label>
+                      <label className="btn btn-secondary border-1 alternative-unit-wrapper">
+                        <input
+                          type="radio"
+                          name="options"
+                          onClick={chooseFahrenheit}
+                        />
+                        ºF
+                      </label>
+                    </div>
+                  </div>
+                </div>
                 <FormattedDate date={weatherData.date} />
               </div>
               <div className="interactive col mt-4 mr-2">

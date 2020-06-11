@@ -17,16 +17,6 @@ export default function CurrentWeather(props) {
         </div>
       </div>
       <h3 className="weather-description mt-2">{props.data.description}</h3>
-      <div className="row">
-        <div className="col-7">
-          <p className="parameters mt-4 mb-0">
-            Wind: <span> {props.data.wind} </span>km/h
-            <br />
-            Humidity: <span>{props.data.humidity}</span>%
-          </p>
-        </div>
-        <div className="col-5"></div>
-      </div>
     </div>
   );
 }

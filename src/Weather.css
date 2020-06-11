@@ -23,6 +23,26 @@
   min-width: 12rem;
 }
 
+.Weather .btn-group {
+  border-radius: 4px;
+  height: 25px;
+  padding: 0 auto;
+}
+
+.Weather .active-unit-wrapper {
+  background-color: #608686;
+  font-size: 12px;
+  padding: 0 auto;
+  height: 25px;
+}
+
+.Weather .alternative-unit-wrapper {
+  background-color: #6ca4a4;
+  font-size: 12px;
+  padding: 0 auto;
+  height: 25px;
+}
+
 .Weather .secondary-info {
   color: #608686;
   font-size: 12px;
