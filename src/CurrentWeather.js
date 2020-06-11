@@ -8,11 +8,11 @@ export default function CurrentWeather(props) {
       <div className="main-info row">
         <div className="main-text col mb-2">
           <p className="temperature mt-4 mb-0">
-            {Math.round(props.data.temperature)}ºC
+            {Math.round(props.data.temperature)}º
           </p>
         </div>
 
-        <div className="main-icon-wrapper col pt-3">
+        <div className="main-icon-wrapper col">
           <WeatherIcon iconCode={props.data.icon} />
         </div>
       </div>

@@ -13,7 +13,7 @@ function App() {
             <h1>Weather Tea</h1>
           </div>
         </div>
-        <Weather defaultCity="São Paulo" />
+        <Weather defaultCity="São Paulo" defaultUnit="metric" />
         <div className="row">
           <Credit />
         </div>

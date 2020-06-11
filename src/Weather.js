@@ -12,11 +12,12 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [unit, setUnit] = useState(props.defaultUnit);
 
   function handleResponse(response) {
     setWeatherData({
-      newCity: response.data.name,
       ready: true,
+      newCity: response.data.name,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
@@ -28,7 +29,7 @@ export default function Weather(props) {
 
   function search() {
     const apiKey = "461572920dce0becb1819d70275340e2";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -43,12 +44,14 @@ export default function Weather(props) {
 
   function chooseCelsius(event) {
     event.preventDefault();
-    alert("Celsius rules!");
+    setUnit("metric");
+    setWeatherData({ ready: false });
   }
 
   function chooseFahrenheit(event) {
     event.preventDefault();
-    alert("Why would you do this?");
+    setUnit("imperial");
+    setWeatherData({ ready: false });
   }
 
   if (weatherData.ready) {
@@ -117,11 +120,11 @@ export default function Weather(props) {
                 </form>
               </div>
             </div>
-            <h2 className="forecast-header mt-2">
+            <h2 className="forecastHeader mt-2">
               What to expect for the next hours:
             </h2>
 
-            <Forecast city={weatherData.newCity} />
+            <Forecast city={weatherData.newCity} unit={unit} />
           </div>
         </div>
       </div>

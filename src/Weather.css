@@ -20,7 +20,7 @@
 }
 
 .Weather .main-info {
-  min-width: 12rem;
+  min-width: 15rem;
 }
 
 .Weather .btn-group {
@@ -48,7 +48,8 @@
   font-size: 12px;
 }
 
-.Weather .forecast-header {
+.Weather .forecastHeader {
+  font-weight: bold;
   font-size: 16px;
   color: #3a403d;
 }
