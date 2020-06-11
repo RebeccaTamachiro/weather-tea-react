@@ -83,9 +83,8 @@ export default function Weather(props) {
             <h2 className="forecast-header mt-2">
               What to expect for the next hours:
             </h2>
-            <div className="card-group row bg-transparent">
-              <Forecast city={weatherData.newCity} />
-            </div>
+
+            <Forecast city={weatherData.newCity} />
           </div>
         </div>
       </div>

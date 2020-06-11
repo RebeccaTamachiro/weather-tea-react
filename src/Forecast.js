@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import ForecastCard from "./ForecastCard";
+
 import "./Forecast.css";
 
 export default function Forecast(props) {
@@ -13,10 +15,12 @@ export default function Forecast(props) {
 
   if (loaded && forecast.city.name === props.city) {
     return (
-      <div className="Forecast">
-        <div className="col placeholder">
-          [Forecast for {props.city} - Coming soon]{" "}
-        </div>
+      <div className="Forecast row">
+        <ForecastCard data={forecast.list[0]} />
+        <ForecastCard data={forecast.list[1]} />
+        <ForecastCard data={forecast.list[2]} />
+        <ForecastCard data={forecast.list[3]} />
+        <ForecastCard data={forecast.list[4]} />
       </div>
     );
   } else {

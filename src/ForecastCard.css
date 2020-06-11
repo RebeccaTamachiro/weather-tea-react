@@ -1,0 +1,15 @@
+.ForecastCard {
+  text-align: center;
+}
+
+.ForecastCard .iconWrapper {
+  font-size: 30px;
+  color: #93e4f9;
+  text-shadow: 2px 2px 3px #c8c8c8;
+}
+
+.ForecastCard .cardHeader,
+.cardFooter {
+  color: #3a403d;
+  margin: 8px auto;
+}
