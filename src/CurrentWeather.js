@@ -3,20 +3,41 @@ import WeatherIcon from "./WeatherIcon";
 import "./CurrentWeather.css";
 
 export default function CurrentWeather(props) {
-  return (
-    <div className="CurrentWeather">
-      <div className="main-info row">
-        <div className="main-text col mb-2">
-          <p className="temperature mt-4 mb-0">
-            {Math.round(props.data.temperature)}º
-          </p>
-        </div>
+  let unit = props.unit;
 
-        <div className="main-icon-wrapper col">
-          <WeatherIcon iconCode={props.data.icon} />
+  if (unit === "metric") {
+    return (
+      <div className="CurrentWeather">
+        <div className="mainInfo row">
+          <div className="mainText col mb-2">
+            <p className="temperature mt-4 mb-0">
+              {Math.round(props.data.temperature)}ºC
+            </p>
+          </div>
+
+          <div className="mainIconWrapper col">
+            <WeatherIcon iconCode={props.data.icon} />
+          </div>
         </div>
+        <h3 className="weatherDescription mt-2">{props.data.description}</h3>
       </div>
-      <h3 className="weather-description mt-2">{props.data.description}</h3>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className="CurrentWeather">
+        <div className="mainInfo row">
+          <div className="main-text col mb-2">
+            <p className="temperature mt-4 mb-0">
+              {Math.round(props.data.temperature)}ºF
+            </p>
+          </div>
+
+          <div className="mainIconWrapper col">
+            <WeatherIcon iconCode={props.data.icon} />
+          </div>
+        </div>
+        <h3 className="weatherDescription mt-2">{props.data.description}</h3>
+      </div>
+    );
+  }
 }

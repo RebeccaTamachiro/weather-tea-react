@@ -15,11 +15,11 @@ export default function Forecast(props) {
   if (loaded && forecast.city.name === props.city) {
     return (
       <div className="Forecast row">
-        <ForecastCard data={forecast.list[0]} />
-        <ForecastCard data={forecast.list[1]} />
-        <ForecastCard data={forecast.list[2]} />
-        <ForecastCard data={forecast.list[3]} />
-        <ForecastCard data={forecast.list[4]} />
+        <ForecastCard data={forecast.list[0]} unit={props.unit} />
+        <ForecastCard data={forecast.list[1]} unit={props.unit} />
+        <ForecastCard data={forecast.list[2]} unit={props.unit} />
+        <ForecastCard data={forecast.list[3]} unit={props.unit} />
+        <ForecastCard data={forecast.list[4]} unit={props.unit} />
       </div>
     );
   } else {

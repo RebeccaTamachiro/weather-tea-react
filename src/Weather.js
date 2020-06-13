@@ -21,7 +21,7 @@ export default function Weather(props) {
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
-      wind: Math.round(response.data.wind.speed * 3.6),
+      wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
     });
@@ -57,23 +57,23 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <div className="row main-card-wrapper mt-4">
-          <div className="main-card mt-0 mb-1 p-3">
+        <div className="row mainCardWrapper mt-4">
+          <div className="mainCard mt-0 mb-1 p-3">
             <h2 className="mb-0">
               Now in
               <span className="location"> {weatherData.newCity}</span>:
             </h2>
             <div className="row">
-              <div className="main-info col">
-                <CurrentWeather data={weatherData} />
+              <div className="mainInfo col">
+                <CurrentWeather data={weatherData} unit={unit} />
                 <div className="row">
-                  <WeatherParameters data={weatherData} />
+                  <WeatherParameters data={weatherData} unit={unit} />
                   <div className="col-5">
                     <div
                       className="btn-group btn-group-toggle mt-4"
                       data-toggle="buttons"
                     >
-                      <label className="btn btn-secondary border-1 active-unit-wrapper">
+                      <label className="btn btn-secondary border-1 activeUnitWrapper">
                         <input
                           type="radio"
                           name="options"
@@ -81,7 +81,7 @@ export default function Weather(props) {
                         />
                         ºC
                       </label>
-                      <label className="btn btn-secondary border-1 alternative-unit-wrapper">
+                      <label className="btn btn-secondary border-1 alternativeUnitWrapper">
                         <input
                           type="radio"
                           name="options"
@@ -102,7 +102,7 @@ export default function Weather(props) {
                     <input
                       type="search"
                       autoComplete="off"
-                      className="form-control bg-light city-search"
+                      className="form-control bg-light citySearch"
                       onChange={updateCity}
                     />
                     <div className="input-group-append">
@@ -114,7 +114,7 @@ export default function Weather(props) {
                       </button>
                     </div>
                   </div>
-                  <a href="/" className="mb-3 mt-1 secondary-info">
+                  <a href="/" className="mb-3 mt-1 secondaryInfo">
                     (my current location)
                   </a>
                 </form>

@@ -4,12 +4,12 @@ import Weather from "./Weather";
 
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <div className="container">
         <div className="row">
-          <div className="col app-title">
+          <div className="col appTitle">
             <h1>Weather Tea</h1>
           </div>
         </div>
@@ -21,5 +21,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

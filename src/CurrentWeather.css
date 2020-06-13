@@ -10,11 +10,11 @@
   font-weight: bold;
 }
 
-.CurrentWeather .weather-description:first-letter {
+.CurrentWeather .weatherDescription:first-letter {
   text-transform: capitalize;
 }
 
-.CurrentWeather .main-icon-wrapper {
+.CurrentWeather .mainIconWrapper {
   font-size: 54px;
   display: block;
   margin-top: 30px;

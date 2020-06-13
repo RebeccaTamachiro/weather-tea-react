@@ -4,11 +4,11 @@ import "./Credit.css";
 export default function Credit() {
   return (
     <div className="Credit">
-      <small className="credits-text mt-1">
+      <small className="creditsText mt-1">
         Coded by {""}
         <a
           href="https://pt.linkedin.com/in/rebeccatamachiro/en"
-          className="credits-link"
+          className="creditsLink"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -17,7 +17,7 @@ export default function Credit() {
         , open-sourced on {""}
         <a
           href="https://github.com/RebeccaTamachiro/weather-tea-react"
-          className="credits-link"
+          className="creditsLink"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -26,7 +26,7 @@ export default function Credit() {
         {""} and hosted on {""}
         <a
           href="https://www.netlify.com/"
-          className="credits-link"
+          className="creditsLink"
           target="_blank"
           rel="noopener noreferrer"
         >

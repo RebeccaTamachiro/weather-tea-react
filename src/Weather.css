@@ -1,9 +1,9 @@
-.Weather .main-card-wrapper {
+.Weather .mainCardWrapper {
   min-width: 18rem;
   max-width: 35rem;
 }
 
-.Weather .main-card {
+.Weather .mainCard {
   border: 2pt solid #56d5c2;
   border-radius: 4px;
   background-color: #dbf1f1;
@@ -19,7 +19,7 @@
   color: #3a403d;
 }
 
-.Weather .main-info {
+.Weather .mainInfo {
   min-width: 15rem;
 }
 
@@ -29,21 +29,21 @@
   padding: 0 auto;
 }
 
-.Weather .active-unit-wrapper {
+.Weather .activeUnitWrapper {
   background-color: #608686;
   font-size: 12px;
   padding: 0 auto;
   height: 25px;
 }
 
-.Weather .alternative-unit-wrapper {
+.Weather .alternativeUnitWrapper {
   background-color: #6ca4a4;
   font-size: 12px;
   padding: 0 auto;
   height: 25px;
 }
 
-.Weather .secondary-info {
+.Weather .secondaryInfo {
   color: #608686;
   font-size: 12px;
 }
@@ -53,7 +53,7 @@
   font-size: 16px;
   color: #3a403d;
 }
-.Weather .city-search {
+.Weather .citySearch {
   border: 1px solid #608686;
 }
 
