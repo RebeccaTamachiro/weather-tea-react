@@ -28,7 +28,7 @@ export default function CurrentWeather(props) {
         <div className="mainInfo row">
           <div className="main-text col mb-2">
             <p className="temperature mt-4 mb-0">
-              {Math.round(props.data.temperature)}ºF
+              {Math.round(props.data.temperature * 1.8 + 32)}ºF
             </p>
           </div>
 

@@ -29,7 +29,7 @@ export default function Weather(props) {
 
   function search() {
     const apiKey = "461572920dce0becb1819d70275340e2";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -45,13 +45,11 @@ export default function Weather(props) {
   function chooseCelsius(event) {
     event.preventDefault();
     setUnit("metric");
-    setWeatherData({ ready: false });
   }
 
   function chooseFahrenheit(event) {
     event.preventDefault();
     setUnit("imperial");
-    setWeatherData({ ready: false });
   }
 
   if (weatherData.ready) {
@@ -67,7 +65,7 @@ export default function Weather(props) {
               <div className="mainInfo col">
                 <CurrentWeather data={weatherData} unit={unit} />
                 <div className="row">
-                  <WeatherParameters data={weatherData} unit={unit} />
+                  <WeatherParameters data={weatherData} />
                   <div className="col-5">
                     <div
                       className="btn-group btn-group-toggle mt-4"

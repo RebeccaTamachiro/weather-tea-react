@@ -14,11 +14,11 @@ export default function ForecastCard(props) {
   }
 
   function temperature() {
-    let temperature = Math.round(props.data.main.temp);
+    let temperature = props.data.main.temp;
     if (props.unit === "metric") {
-      return `${temperature}ºC`;
+      return `${Math.round(temperature)}ºC`;
     } else {
-      return `${temperature}ºF`;
+      return `${Math.round(temperature * 1.8 + 32)}ºF`;
     }
   }
 
