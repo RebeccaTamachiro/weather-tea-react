@@ -13,7 +13,7 @@ export default function App() {
             <h1>Weather Tea</h1>
           </div>
         </div>
-        <Weather defaultCity="São Paulo" defaultUnit="metric" />
+        <Weather defaultCity="q=São Paulo" defaultUnit="metric" />
         <div className="row">
           <Credit />
         </div>

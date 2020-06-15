@@ -3,7 +3,7 @@ import React from "react";
 export default function WeatherIcon(props) {
   const iconCodeMapping = {
     "01d": "fas fa-sun",
-    "01n": "fas fa-moon",
+    "01n": "fas fa-sun",
     "02d": "fas fa-cloud",
     "02n": "fas fa-cloud",
     "03d": "fas fa-cloud",

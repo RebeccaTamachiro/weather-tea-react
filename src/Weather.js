@@ -11,8 +11,8 @@ import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-  const [city, setCity] = useState(props.defaultCity);
   const [unit, setUnit] = useState(props.defaultUnit);
+  let inputCity = null;
 
   function handleResponse(response) {
     setWeatherData({
@@ -27,19 +27,19 @@ export default function Weather(props) {
     });
   }
 
-  function search() {
+  function search(city) {
     const apiKey = "461572920dce0becb1819d70275340e2";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    search();
+    search(`q=${inputCity}`);
   }
 
   function updateCity(event) {
-    setCity(event.target.value);
+    inputCity = event.target.value;
   }
 
   function chooseCelsius(event) {
@@ -50,6 +50,18 @@ export default function Weather(props) {
   function chooseFahrenheit(event) {
     event.preventDefault();
     setUnit("imperial");
+  }
+
+  function handleGeolocation(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let apiVariable = `lat=${latitude}&lon=${longitude}`;
+    search(apiVariable);
+  }
+
+  function chooseCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(handleGeolocation);
   }
 
   if (weatherData.ready) {
@@ -112,7 +124,11 @@ export default function Weather(props) {
                       </button>
                     </div>
                   </div>
-                  <a href="/" className="mb-3 mt-1 secondaryInfo">
+                  <a
+                    href="/"
+                    className="mb-3 mt-1 secondaryInfo"
+                    onClick={chooseCurrentLocation}
+                  >
                     (my current location)
                   </a>
                 </form>
@@ -128,7 +144,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    search();
+    search(props.defaultCity);
     return <p>Loading...</p>;
   }
 }
