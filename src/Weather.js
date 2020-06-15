@@ -12,6 +12,12 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [unit, setUnit] = useState(props.defaultUnit);
+  const [celsiusStyle, setCelsiusStyle] = useState(
+    "btn btn-secondary border-1 activeUnitWrapper"
+  );
+  const [fahrenheitStyle, setFahrenheitStyle] = useState(
+    "btn btn-secondary border-1 alternativeUnitWrapper"
+  );
   let inputCity = null;
 
   function handleResponse(response) {
@@ -45,11 +51,15 @@ export default function Weather(props) {
   function chooseCelsius(event) {
     event.preventDefault();
     setUnit("metric");
+    setCelsiusStyle("btn btn-secondary border-1 activeUnitWrapper");
+    setFahrenheitStyle("btn btn-secondary border-1 alternativeUnitWrapper");
   }
 
   function chooseFahrenheit(event) {
     event.preventDefault();
     setUnit("imperial");
+    setCelsiusStyle("btn btn-secondary border-1 alternativeUnitWrapper");
+    setFahrenheitStyle("btn btn-secondary border-1 activeUnitWrapper");
   }
 
   function handleGeolocation(position) {
@@ -83,20 +93,13 @@ export default function Weather(props) {
                       className="btn-group btn-group-toggle mt-4"
                       data-toggle="buttons"
                     >
-                      <label className="btn btn-secondary border-1 activeUnitWrapper">
-                        <input
-                          type="radio"
-                          name="options"
-                          onClick={chooseCelsius}
-                        />
+                      <label className={celsiusStyle} onClick={chooseCelsius}>
                         ºC
                       </label>
-                      <label className="btn btn-secondary border-1 alternativeUnitWrapper">
-                        <input
-                          type="radio"
-                          name="options"
-                          onClick={chooseFahrenheit}
-                        />
+                      <label
+                        className={fahrenheitStyle}
+                        onClick={chooseFahrenheit}
+                      >
                         ºF
                       </label>
                     </div>
