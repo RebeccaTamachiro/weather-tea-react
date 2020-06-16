@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Loader from "react-loader-spinner";
 import ForecastCard from "./ForecastCard";
 
 import "./Forecast.css";
@@ -26,6 +27,12 @@ export default function Forecast(props) {
     const apiKey = "461572920dce0becb1819d70275340e2";
     let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleForecastResponse);
-    return null;
+    return (
+      <div className="Forecast row">
+        <div className="loader col mt-2">
+          <Loader type="TailSpin" color="#93e4f9" height={70} width={70} />
+        </div>
+      </div>
+    );
   }
 }

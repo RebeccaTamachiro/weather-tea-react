@@ -1,3 +1,8 @@
-.Forecast .placeholder {
-  color: #a8cfb8;
+.Forecast {
+  height: 125px;
+}
+
+.Forecast .loader {
+  display: inline-block;
+  text-align: center;
 }
