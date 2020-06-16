@@ -59,7 +59,7 @@ export default function TipCard(props) {
       <div className="TipCard">
         <div className="card-body bg-light mb-2 teaTip">
           <p className="card-text">
-            👉 A great weather to have some nice{" "}
+            A great weather to have some nice{" "}
             <span className="teaFlavour">{teaFlavour}</span> OR...
           </p>
         </div>

@@ -109,7 +109,7 @@ export default function Weather(props) {
               </div>
               <div className="interactive col mt-4 mr-2">
                 <TipCard temperature={weatherData.temperature} />
-                <p className="mb-2">...find a different city 🙂</p>
+                <p className="mb-2">...find a different city</p>
                 <form className="mb-2" onSubmit={handleSubmit}>
                   <div className="input-group my-0">
                     <input
