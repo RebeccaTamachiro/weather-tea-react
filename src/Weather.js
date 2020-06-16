@@ -108,7 +108,7 @@ export default function Weather(props) {
                 <FormattedDate date={weatherData.date} />
               </div>
               <div className="interactive col mt-4 mr-2">
-                <TipCard />
+                <TipCard temperature={weatherData.temperature} />
                 <p className="mb-2">...find a different city 🙂</p>
                 <form className="mb-2" onSubmit={handleSubmit}>
                   <div className="input-group my-0">
