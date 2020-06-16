@@ -29,7 +29,7 @@ export default function Forecast(props) {
     axios.get(apiUrl).then(handleForecastResponse);
     return (
       <div className="Forecast row">
-        <div className="loader col mt-2">
+        <div className="loader col mt-4">
           <Loader type="TailSpin" color="#93e4f9" height={70} width={70} />
         </div>
       </div>

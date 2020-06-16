@@ -60,3 +60,11 @@
 .Weather .button-addon2 {
   background-color: #ffb6b6;
 }
+
+.Weather .loadingCard {
+  border: 2pt solid #56d5c2;
+  border-radius: 4px;
+  background-color: #dbf1f1;
+  height: 475px;
+  width: 561px;
+}

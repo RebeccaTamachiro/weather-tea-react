@@ -18,6 +18,7 @@ export default function Weather(props) {
   const [fahrenheitStyle, setFahrenheitStyle] = useState(
     "btn btn-secondary border-1 alternativeUnitWrapper"
   );
+
   let inputCity = null;
 
   function handleResponse(response) {
@@ -109,7 +110,12 @@ export default function Weather(props) {
               </div>
               <div className="interactive col mt-4 mr-2">
                 <TipCard temperature={weatherData.temperature} />
-                <p className="mb-2">...find a different city</p>
+                <p className="mb-2">
+                  ...find a different city{" "}
+                  <span role="img" aria-label="smile">
+                    🙂
+                  </span>
+                </p>
                 <form className="mb-2" onSubmit={handleSubmit}>
                   <div className="input-group my-0">
                     <input
@@ -148,6 +154,12 @@ export default function Weather(props) {
     );
   } else {
     search(props.defaultCity);
-    return <p>Loading...</p>;
+    return (
+      <div className="Weather">
+        <div className="row mainCardWrapper mt-4">
+          <div className="loadingCard mb-1" />
+        </div>
+      </div>
+    );
   }
 }
