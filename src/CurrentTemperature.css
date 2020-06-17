@@ -1,24 +1,24 @@
-.CurrentWeather .temperature {
+.CurrentTemperature .temperature {
   font-size: 45px;
   color: #3a403d;
   padding-top: 10px;
 }
 
-.CurrentWeather h3 {
+.CurrentTemperature h3 {
   font-size: 16px;
   color: #3a403d;
   font-weight: bold;
 }
 
-.CurrentWeather .weatherDescription:first-letter {
+.CurrentTemperature .weatherDescription:first-letter {
   text-transform: capitalize;
 }
 
-.CurrentWeather .mainIconWrapper {
+.CurrentTemperature .mainIconWrapper {
   font-size: 54px;
   display: block;
   margin-top: 30px;
   color: #93e4f9;
   text-shadow: 2px 2px 3px #c8c8c8;
-  text-align: center;
+  padding: 0;
 }

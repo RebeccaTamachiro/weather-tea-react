@@ -3,12 +3,33 @@ import "./TipCard.css";
 
 export default function TipCard(props) {
   const [teaFlavour, setTeaFlavour] = useState("black tea");
+  const [sentenceStarter, setSentenceStarter] = useState(
+    "A great weather to have some nice"
+  );
   const [temperatureTracker, setTemperatureTracker] = useState(null);
+
+  let winterSentenceStarters = [
+    "Enjoy colder days with some",
+    "Get yourself a blanket and some",
+    "Why not warm yourself up with some",
+  ];
+
+  let generalSentenceStarters = [
+    "It's always a good weather for some",
+    "A great weather to have some nice",
+    "Why not vary a little with some",
+  ];
+
+  let summerSentenceStarters = [
+    "Why not try some refreshing",
+    "Refresh yourself and go healthy with some",
+    "Great weather to enjoy some",
+  ];
 
   let coldWeatherTeas = [
     "spiced apple tea",
     "lemon ginger tea",
-    "chai latte",
+    "hot chai latte",
     "raspberry tea",
     "ginger turmeric tea",
     "spiced orange tea",
@@ -28,11 +49,34 @@ export default function TipCard(props) {
     "honeydew bubble tea",
     "lemon iced tea",
     "iced chai latte",
-    "green tea",
     "peach iced tea",
   ];
 
-  function chooseFlavour() {
+  function matchSentenceStarter() {
+    if (props.temperature < 10) {
+      setSentenceStarter(
+        winterSentenceStarters[
+          Math.floor(Math.random() * winterSentenceStarters.length)
+        ]
+      );
+    }
+    if (props.temperature >= 10 && props.temperature <= 20) {
+      setSentenceStarter(
+        generalSentenceStarters[
+          Math.floor(Math.random() * generalSentenceStarters.length)
+        ]
+      );
+    }
+    if (props.temperature > 20) {
+      setSentenceStarter(
+        summerSentenceStarters[
+          Math.floor(Math.random() * summerSentenceStarters.length)
+        ]
+      );
+    }
+  }
+
+  function matchTeaFlavour() {
     if (props.temperature < 10) {
       setTeaFlavour(
         coldWeatherTeas[Math.floor(Math.random() * coldWeatherTeas.length)]
@@ -51,26 +95,27 @@ export default function TipCard(props) {
         hotWeatherTeas[Math.floor(Math.random() * hotWeatherTeas.length)]
       );
     }
+    matchSentenceStarter();
     setTemperatureTracker(props.temperature);
   }
 
   if (temperatureTracker === props.temperature) {
     return (
       <div className="TipCard">
-        <div className="card-body bg-light mb-2 teaTip">
+        <div className="card-body mb-2">
           <p className="card-text">
             {" "}
             <span role="img" aria-label="pointer">
               👉{" "}
             </span>
-            A great weather to have some nice{" "}
-            <span className="teaFlavour">{teaFlavour}</span> OR...
+            {sentenceStarter} <span className="teaFlavour">{teaFlavour}</span>{" "}
+            OR...
           </p>
         </div>
       </div>
     );
   } else {
-    chooseFlavour();
+    matchTeaFlavour();
     return (
       <div className="card-body bg-light mb-2 teaTip">
         <p className="card-text">Loading...</p>

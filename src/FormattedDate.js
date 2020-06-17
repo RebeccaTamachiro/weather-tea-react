@@ -35,7 +35,7 @@ export default function FormattedDate(props) {
 
   return (
     <div className="FormattedDate">
-      <p className="my-0 secondary-info">
+      <p className="my-0 secondaryInfo">
         Last updated:
         <span>
           {" "}

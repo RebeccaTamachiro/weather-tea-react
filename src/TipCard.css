@@ -1,12 +1,10 @@
 .TipCard .card-body {
   min-width: 12rem;
   min-height: 7rem;
-}
-
-.TipCard .teaTip {
   border: 1px solid #608686;
   border-radius: 4px;
   color: #608686;
+  background-color: #f8f9fa;
 }
 
 .TipCard .teaFlavour {

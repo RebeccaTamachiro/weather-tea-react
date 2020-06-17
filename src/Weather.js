@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-import CurrentWeather from "./CurrentWeather";
+import CurrentTemperature from "./CurrentTemperature";
 import WeatherParameters from "./WeatherParameters";
 import TipCard from "./TipCard";
 import Forecast from "./Forecast";
@@ -86,7 +86,7 @@ export default function Weather(props) {
             </h2>
             <div className="row">
               <div className="mainInfo col">
-                <CurrentWeather data={weatherData} unit={unit} />
+                <CurrentTemperature data={weatherData} unit={unit} />
                 <div className="row">
                   <WeatherParameters data={weatherData} />
                   <div className="col-5">
