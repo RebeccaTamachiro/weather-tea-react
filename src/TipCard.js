@@ -23,7 +23,7 @@ export default function TipCard(props) {
   let summerSentenceStarters = [
     "Why not try some refreshing",
     "Refresh yourself and go healthy with some",
-    "Great weather to enjoy some",
+    "Great weather to enjoy some tasty",
   ];
 
   let coldWeatherTeas = [

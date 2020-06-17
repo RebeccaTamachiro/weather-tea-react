@@ -2,11 +2,12 @@
   margin: 20px;
 }
 
-.App h1 {
+.App .teaAppTitle {
   color: #56d5c2;
   margin-top: 15px;
 }
 
-.App .appTitle {
-  border-left: #56d5c2 solid 2pt;
+.App .snackAppTitle {
+  color: #ffc107;
+  margin-top: 15px;
 }
