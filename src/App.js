@@ -92,7 +92,7 @@ export default function App() {
                 </div>
                 <div className="switchApp col-4 text-right">
                   <button
-                    className="teaButton btn btn-danger"
+                    className="closeButton btn btn-danger"
                     onClick={switchToSnack}
                   >
                     X
@@ -108,7 +108,7 @@ export default function App() {
                 </div>
                 <div className="switchApp col-4 text-right">
                   <button
-                    className="teaButton btn btn-danger"
+                    className="closeButton btn btn-danger"
                     onClick={switchToTea}
                   >
                     X

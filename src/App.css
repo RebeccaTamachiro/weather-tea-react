@@ -24,6 +24,10 @@
   margin: 25px 0 0px 60px;
 }
 
+.App .closeButton {
+  margin: 25px 0 0px 60px;
+}
+
 .App .bothLink {
   display: block;
   margin: 0 0 0 60px;
