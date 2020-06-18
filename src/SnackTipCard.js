@@ -7,7 +7,7 @@ export default function SnackTipCard(props) {
 
   let summerSnackTips = [
     "Refresh yourself and go healthy with some fruit salad",
-    "Great weather to enjoy some greek yogurt variation",
+    "Great weather to enjoy some greek yogurt with blueberries",
   ];
 
   let winterSnackTips = [
