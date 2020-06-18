@@ -11,16 +11,21 @@ export default function App() {
       <div className="container">
         <div className="row">
           <div className="col">
-            <div className="teaAppTitle">
-              <h1>Weather Tea</h1>
+            <div className="teaApp">
+              <div className="teaAppTitle">
+                <h1>Weather Tea</h1>
+              </div>
+              <Weather defaultCity="q=São Paulo" defaultUnit="metric" />
             </div>
-            <Weather defaultCity="q=São Paulo" defaultUnit="metric" />
           </div>
+
           <div className="col">
-            <div className="snackAppTitle">
-              <h1>Weather Snack</h1>
+            <div className="snackApp">
+              <div className="snackAppTitle">
+                <h1>Weather Snack</h1>
+              </div>
+              <WeatherSnack defaultCity="q=São Paulo" defaultUnit="metric" />
             </div>
-            <WeatherSnack defaultCity="q=São Paulo" defaultUnit="metric" />
           </div>
         </div>
         <div className="row">

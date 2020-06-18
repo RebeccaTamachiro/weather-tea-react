@@ -43,9 +43,8 @@ export default function SnackTipCard(props) {
   if (temperatureTracker === props.temperature) {
     return (
       <div className="TipCard">
-        <div className="card-body mb-2">
+        <div className="card-body bg-light align-middle mb-2">
           <p className="card-text">
-            {" "}
             <span role="img" aria-label="pointer">
               👉{" "}
             </span>

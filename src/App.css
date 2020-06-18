@@ -7,6 +7,11 @@
   margin-top: 15px;
 }
 
+.App .teaApp,
+.snackApp {
+  margin: 5px;
+}
+
 .App .snackAppTitle {
   color: #ffc107;
   margin-top: 15px;

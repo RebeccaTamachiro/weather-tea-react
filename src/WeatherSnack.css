@@ -19,7 +19,11 @@
 }
 
 .WeatherSnack .mainInfo {
-  min-width: 15rem;
+  min-width: 11rem;
+}
+
+.WeatherSnack .interactive {
+  min-width: 11rem;
 }
 
 .WeatherSnack .btn-group {
@@ -58,9 +62,9 @@
 }
 
 .WeatherSnack .loadingCard {
-  border: 2pt solid #56d5c2;
+  border: 2pt solid #ffc107;
   border-radius: 4px;
-  background-color: #dbf1f1;
+  background-color: #f7fbe1;
   height: 475px;
   width: 561px;
 }

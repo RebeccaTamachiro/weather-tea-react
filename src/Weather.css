@@ -19,7 +19,11 @@
 }
 
 .Weather .mainInfo {
-  min-width: 15rem;
+  min-width: 11rem;
+}
+
+.Weather .interactive {
+  min-width: 11rem;
 }
 
 .Weather .btn-group {

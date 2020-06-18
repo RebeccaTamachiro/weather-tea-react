@@ -110,6 +110,7 @@ export default function WeatherSnack(props) {
               </div>
               <div className="interactive col mt-4 mr-2">
                 <SnackTipCard temperature={weatherData.temperature} />
+
                 <p className="mb-2">
                   ...find a different city{" "}
                   <span role="img" aria-label="smile">
