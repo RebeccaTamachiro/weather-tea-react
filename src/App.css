@@ -11,6 +11,7 @@
 .snackApp {
   margin: 5px;
   max-width: 35rem;
+  min-width: 11rem;
 }
 
 .App .snackAppTitle {

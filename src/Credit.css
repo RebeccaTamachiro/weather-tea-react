@@ -1,5 +1,7 @@
 .Credit .creditsText {
   color: #608686;
+  display: block;
+  margin-left: 6px;
 }
 
 .Credit .creditsLink {

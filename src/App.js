@@ -26,7 +26,7 @@ export default function App() {
   if (version === "tea") {
     return (
       <div className="App">
-        <div className="container-sm">
+        <div className="container">
           <div className="teaApp">
             <div className="row">
               <div className="teaAppTitle col-8">
@@ -53,7 +53,7 @@ export default function App() {
   if (version === "snack") {
     return (
       <div className="App">
-        <div className="container-sm">
+        <div className="container">
           <div className="snackApp">
             <div className="row">
               <div className="snackAppTitle col-8">
@@ -83,7 +83,7 @@ export default function App() {
   if (version === "both") {
     return (
       <div className="App">
-        <div className="container-sm">
+        <div className="container">
           <div className="row">
             <div className="teaApp col">
               <div className="row">
