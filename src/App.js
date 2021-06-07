@@ -29,10 +29,10 @@ export default function App() {
         <div className="container">
           <div className="teaApp">
             <div className="row">
-              <div className="teaAppTitle col-8">
+              <div className="teaAppTitle col-sm-8">
                 <h1>Weather Tea</h1>
               </div>
-              <div className="switchApp col-4">
+              <div className="switchApp col-sm-4">
                 <button
                   className="snackButton btn btn-primary"
                   onClick={switchToSnack}
@@ -56,10 +56,10 @@ export default function App() {
         <div className="container">
           <div className="snackApp">
             <div className="row">
-              <div className="snackAppTitle col-8">
+              <div className="snackAppTitle col-sm-8">
                 <h1>Weather Snack</h1>
               </div>
-              <div className="switchApp col-4">
+              <div className="switchApp col-sm-4">
                 <button
                   className="teaButton btn btn-info"
                   onClick={switchToTea}
