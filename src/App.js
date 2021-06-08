@@ -85,7 +85,7 @@ export default function App() {
       <div className="App">
         <div className="container">
           <div className="row">
-            <div className="teaApp col">
+            <div className="teaApp col-md">
               <div className="row">
                 <div className="teaAppTitle col-8">
                   <h1>Weather Tea</h1>
@@ -101,7 +101,7 @@ export default function App() {
               </div>
               <Weather defaultCity="q=São Paulo" defaultUnit="metric" />
             </div>
-            <div className="snackApp col">
+            <div className="snackApp col-md">
               <div className="row">
                 <div className="snackAppTitle col-8">
                   <h1>Weather Snack</h1>
