@@ -25,12 +25,12 @@ export default function Credit() {
         </a>
         {""} and hosted on {""}
         <a
-          href="https://pages.cloudflare.com/"
+          href="https://www.netlify.com/"
           className="creditsLink"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Cloudflare Pages
+          Netlify
         </a>
       </small>
     </div>
